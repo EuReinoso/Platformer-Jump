@@ -3,7 +3,7 @@ from pygame.locals import *
 
 pygame.init()
 
-WINDOW_SIZE = (800,640)
+WINDOW_SIZE = (640,800)
 
 window = pygame.display.set_mode(WINDOW_SIZE)
 pygame.display.set_caption("Platformer Jump")
