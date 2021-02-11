@@ -1,5 +1,6 @@
 import pygame,sys
 from pygame.locals import *
+from player import Player
 
 pygame.init()
 
@@ -10,6 +11,8 @@ pygame.display.set_caption("Platformer Jump")
 
 loop = True
 
+player = Player(100,100)
+
 while loop:
     window.fill((135, 206, 235))
 
@@ -17,5 +20,6 @@ while loop:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
-
+            
+    player.draw(window)
     pygame.display.update()
