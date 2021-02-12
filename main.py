@@ -30,6 +30,9 @@ while loop:
             sys.exit()
     
         player.move_dir(event)
+
+    if player.rect.y + player.img_idle[0].get_height() >= DISPLAY_SIZE[1]:
+        player.rect.y = DISPLAY_SIZE[1] - player.img_idle[0].get_height()
         
     #draw
     player.draw(display)
