@@ -1,6 +1,7 @@
 import pygame,sys
 from pygame.locals import *
 from player import Player
+from platform import Platform
 
 pygame.init()
 
@@ -18,6 +19,8 @@ loop = True
 
 player = Player(10,10)
 
+plat = Platform(10,10)
+
 while loop:
     display.fill((135, 206, 235))
 
@@ -30,8 +33,10 @@ while loop:
         
     #draw
     player.draw(display)
+    plat.draw(display)
 
     #update
+    plat.update()
     player.update()
     window.blit(pygame.transform.scale(display,WINDOW_SIZE),(0,0))
     pygame.display.update()
