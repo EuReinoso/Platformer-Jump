@@ -21,3 +21,4 @@ class Platform:
     def move(self):
         self.rect.y += self.y_vel
 
+
