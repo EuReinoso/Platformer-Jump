@@ -49,8 +49,8 @@ class Player:
                 self.right = True      
             elif event.key == pygame.K_LEFT:
                 self.left = True       
-            if event.key == pygame.K_SPACE:
-                self.jump()
+            # if event.key == pygame.K_SPACE:
+            #     self.jump()
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_RIGHT:
                 self.right = False
