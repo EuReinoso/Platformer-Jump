@@ -28,8 +28,8 @@ def collision(rect,plats):
             if player.y_momentum < 0:
                 collision_types['top'] = True
             if player.y_momentum > 0:
-                if player.rect.bottom >= plat.rect.top:
-                    player.rect.bottom = plat.rect.top
+                if rect.bottom >= plat.rect.top and player.y_momentum > 1:
+                    rect.bottom = plat.rect.top
                     collision_types['bottom'] = True
     return collision_types
 
